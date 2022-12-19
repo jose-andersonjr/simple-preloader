@@ -19,12 +19,10 @@ form.addEventListener('submit', (e) => {
 })
 
 function mostrarLoading() {
-    loading.innerHTML = '<div class="spinner-grow" role="status"></div>'
     loading.style.display = 'flex'
 }
 
 function esconderLoading() {
-    loading.innerHTML = ''
     loading.style.display = 'none'
 }
 
@@ -50,3 +48,5 @@ async function doSubmit() {
     }
     esconderLoading()
 }
+
+window.addEventListener('load', esconderLoading())
